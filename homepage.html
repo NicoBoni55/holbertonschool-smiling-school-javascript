@@ -84,7 +84,7 @@
 
       function loadPopularTutorials() {
         $.ajax({
-          url: 'https://smileschool-api.hbtn.info/popular-tutorials',
+          url: 'https://smileschool-api.hbtn.info/latest-videos',
           type: 'GET',
           dataType: 'json',
           success: function (data) {
@@ -99,7 +99,7 @@
 
             tutorials.forEach((tutorial, index) => {
               let starsHTML = '';
-              for (let star = 0; star <= 5; star++) {
+              for (let star = 1; star <= 5; star++) {
                 if (star <= tutorial.star) {
                   starsHTML += `<img src="images/star_on.png" alt="star on" width="15px" />`;
                 } else {
